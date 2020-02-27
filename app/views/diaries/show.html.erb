@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @diary.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @diary.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @diary.body %>
+</p>
+
+<p>
+  <strong>Create:</strong>
+  <%= @diary.created_at %>
+</p>
+
+<%= link_to '編集', edit_diary_path(@diary) %> |
+<%= link_to '削除', @diary, method: :delete, data: { confirm: '削除していいですか?' } %> |
+<%= link_to '一覧に戻る', diaries_path %>
